@@ -49,13 +49,13 @@ export interface GameState {
 }
 
 export const GRID_SIZE = 20;
-export const GAME_WIDTH = 400;
-export const GAME_HEIGHT = 600;
-export const COLS = GAME_WIDTH / GRID_SIZE;
-export const ROWS = GAME_HEIGHT / GRID_SIZE;
+export const COLS = 20;
+export const ROWS = 20;
+export const GAME_WIDTH = COLS * GRID_SIZE;
+export const GAME_HEIGHT = ROWS * GRID_SIZE;
 export const MAX_SKILL = 100;
 export const SKILL_GAIN = 20;
-export const BASE_FPS = 10;
+export const BASE_FPS = 8;
 
 export const DIRECTIONS: Record<string, Direction> = {
   UP: { x: 0, y: -1 },
@@ -115,7 +115,7 @@ export const SKINS: Record<string, SkinConfig> = {
     color: "#ffffff",
     bodyColor: "#dddddd",
     glowColor: "#ffffff30",
-    skillName: "Nika's Laugh",
+    skillName: "Nika Mode",
     skillDuration: 6000,
     description: "Random movement, x3 Food",
     icon: "Laugh",
